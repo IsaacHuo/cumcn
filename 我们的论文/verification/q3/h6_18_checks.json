@@ -1,0 +1,14 @@
+{
+  "variant": "h6_18",
+  "days": 334,
+  "full_year": true,
+  "physical_checks": 334,
+  "settlement_checks": 334,
+  "cross_day_soc_checks": 333,
+  "causal_version_checks": 334,
+  "fallback_events": [],
+  "successful_cold_restarts": [],
+  "max_balance_residual": 1.6143530956469476e-10,
+  "max_soc_residual": 1.502461313257778e-11,
+  "max_settlement_residual": 1.4551915228366852e-11
+}

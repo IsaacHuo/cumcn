@@ -1,0 +1,311 @@
+{
+  "passed": true,
+  "strategies": 10,
+  "days_per_strategy": 334,
+  "numerical": [
+    {
+      "variant": "main",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [
+        {
+          "date": "2025-10-16",
+          "stage": 3,
+          "interval": 115,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        }
+      ],
+      "max_balance_residual": 5.806555236631539e-09,
+      "max_soc_residual": 1.502461313257778e-11,
+      "max_settlement_residual": 1.4551915228366852e-11
+    },
+    {
+      "variant": "forecast0",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [
+        {
+          "date": "2025-04-15",
+          "stage": 0,
+          "interval": 119,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        },
+        {
+          "date": "2025-05-04",
+          "stage": 0,
+          "interval": 129,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        },
+        {
+          "date": "2025-11-30",
+          "stage": 0,
+          "interval": 115,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        },
+        {
+          "date": "2025-12-14",
+          "stage": 0,
+          "interval": 114,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        },
+        {
+          "date": "2025-12-14",
+          "stage": 0,
+          "interval": 116,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        }
+      ],
+      "max_balance_residual": 2.0122570276726037e-11,
+      "max_soc_residual": 2.000177801164682e-12,
+      "max_settlement_residual": 1.4551915228366852e-11
+    },
+    {
+      "variant": "h6",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [
+        {
+          "date": "2025-11-14",
+          "stage": 1,
+          "interval": 116,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        }
+      ],
+      "max_balance_residual": 1.2732925824820995e-11,
+      "max_soc_residual": 1.8189894035458565e-12,
+      "max_settlement_residual": 1.4551915228366852e-11
+    },
+    {
+      "variant": "h12",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [],
+      "max_balance_residual": 3.2034677133196965e-09,
+      "max_soc_residual": 1.8189894035458565e-12,
+      "max_settlement_residual": 1.4551915228366852e-11
+    },
+    {
+      "variant": "h18",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [
+        {
+          "date": "2025-06-15",
+          "stage": 3,
+          "interval": 107,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        }
+      ],
+      "max_balance_residual": 3.3157242027922764e-10,
+      "max_soc_residual": 1.502461313257778e-11,
+      "max_settlement_residual": 1.4551915228366852e-11
+    },
+    {
+      "variant": "h6_12",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [],
+      "max_balance_residual": 5.806555236631539e-09,
+      "max_soc_residual": 1.9095836023552692e-12,
+      "max_settlement_residual": 1.4551915228366852e-11
+    },
+    {
+      "variant": "h6_18",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [],
+      "max_balance_residual": 1.6143530956469476e-10,
+      "max_soc_residual": 1.502461313257778e-11,
+      "max_settlement_residual": 1.4551915228366852e-11
+    },
+    {
+      "variant": "h12_18",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [
+        {
+          "date": "2025-10-16",
+          "stage": 3,
+          "interval": 115,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        }
+      ],
+      "max_balance_residual": 3.883769750245847e-09,
+      "max_soc_residual": 1.502461313257778e-11,
+      "max_settlement_residual": 1.4551915228366852e-11
+    },
+    {
+      "variant": "info_only",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [
+        {
+          "date": "2025-04-16",
+          "stage": 1,
+          "interval": 62,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        },
+        {
+          "date": "2025-05-14",
+          "stage": 1,
+          "interval": 50,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        },
+        {
+          "date": "2025-05-30",
+          "stage": 1,
+          "interval": 41,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        },
+        {
+          "date": "2025-10-29",
+          "stage": 3,
+          "interval": 117,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        }
+      ],
+      "max_balance_residual": 1.2946088645549025e-11,
+      "max_soc_residual": 9.094947017729282e-13,
+      "max_settlement_residual": 1.4551915228366852e-11
+    },
+    {
+      "variant": "literal_all",
+      "days": 334,
+      "full_year": true,
+      "physical_checks": 334,
+      "settlement_checks": 334,
+      "cross_day_soc_checks": 333,
+      "causal_version_checks": 334,
+      "fallback_events": [],
+      "successful_cold_restarts": [
+        {
+          "date": "2025-03-25",
+          "stage": 3,
+          "interval": 113,
+          "initial_status": "HighsModelStatus.kUnknown",
+          "retry_status": "HighsModelStatus.kOptimal"
+        }
+      ],
+      "max_balance_residual": 8.003553375601768e-10,
+      "max_soc_residual": 1.0231815394945443e-12,
+      "max_settlement_residual": 1.4551915228366852e-11
+    }
+  ],
+  "paper": {
+    "pages": 19,
+    "layout_or_reference_warnings": [],
+    "text_characters": 17271
+  },
+  "workbook": {
+    "sheets": [
+      "计划购电量",
+      "调整购电量",
+      "充放电量",
+      "紧急购电量"
+    ],
+    "plan_days": 334,
+    "plan_intervals": 144,
+    "storage_rows": 2004,
+    "emergency_rows": 754,
+    "date_continuity": true,
+    "template_residuals": [],
+    "plan_total_checks": 334,
+    "adjusted_total_checks": 334,
+    "storage_boundary_checks": 334,
+    "emergency_day_checks": 334
+  },
+  "figures": {
+    "q3_year": {
+      "pages": 1,
+      "vector": true
+    },
+    "q3_compare": {
+      "pages": 1,
+      "vector": true
+    },
+    "q3_day_20250320": {
+      "pages": 1,
+      "vector": true
+    },
+    "q3_day_20250621": {
+      "pages": 1,
+      "vector": true
+    },
+    "q3_day_20250923": {
+      "pages": 1,
+      "vector": true
+    },
+    "q3_day_20251221": {
+      "pages": 1,
+      "vector": true
+    }
+  },
+  "sha256": {
+    "paper\\build\\main.pdf": "ad712db0ad7dc0dd90916d3a78603c34a60c4fa1a1341361dff3d718cd65a594",
+    "paper\\main.tex": "cb26d0143bd1b23a697b755c8133a9f63e874b9e2cb01c75fff9696514e1a42a",
+    "paper\\sections\\q3.tex": "ee46dd5605d33f773920c3cee52ae3a415c5adda147be952635a32982e847bbf",
+    "results\\result3.xlsx": "1e8542b5a6244800288e528d722176d7580afaefb24d76457ecc3043b78b9916",
+    "results\\q3_report.json": "7376752a3d20bb11c699ee3b388d578024b6f3463221f2e47b96f1c8e1f04c6a",
+    "results\\q3_detail.csv": "bcb299c98ab39edcc55e8d084f7a9c89808deb182dde687a35068922e00684d0",
+    "code\\solve_q3.py": "2ee942e7ae780b02467dbd0d88bca0d69f2f684d7c46e4cbd1123a486017d690",
+    "code\\plot_q3.m": "e7580749b65a14a95141cbb0342ac84937c00d076af0563dd1469669dd976992"
+  }
+}

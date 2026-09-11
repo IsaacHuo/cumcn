@@ -1,0 +1,13 @@
+{
+  "interval_count": 144,
+  "max_balance_error_kwh": 1.1368683772161603e-13,
+  "max_reconstructed_soc_error_kwh": 9.094947017729282e-13,
+  "max_bound_violation_kwh": 2.2737367544323206e-13,
+  "terminal_error_kwh": 0.0,
+  "cost_error_yuan": 0.0,
+  "block_error_kwh": 9.094947017729282e-13,
+  "simultaneous_periods": 0,
+  "whole_day_energy_error_kwh": 6.821210263296962e-12,
+  "tolerance": 1e-05,
+  "passed": true
+}

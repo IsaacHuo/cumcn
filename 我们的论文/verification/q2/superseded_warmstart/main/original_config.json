@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "variant": "main",
+  "scenario_count": 7,
+  "target": 6000.0,
+  "history_pairs": 28,
+  "prior_mix": 0.05,
+  "highspy": "1.15.1",
+  "solver_sha256": "a2301947a09b85329b45ba8677bf19334364dbaceb48e32e9412dcc36427756c",
+  "input_sha256": "2e95fd446bfafa0d8c59577b5c2e2ea8b3f1def20dde54a3062556f4da9b4c72"
+}

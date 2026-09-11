@@ -1,0 +1,80 @@
+\clearpage
+\appendix
+\section{历史情景与预报处理细节}\label{app:scenario}
+\subsection{历史误差样本}
+在第$d$日决策时，只保留随后两日已经完整观测的历史起点$j$。按历史起点当时可用信息重建48小时预测，以真实值减去当时预测得到负载和光伏误差轨迹。采用最近28个起点，不足时使用已有样本；首个评价日有23个完整样本。
+
+按各时段历史误差标准差进行归一化，尺度下限取$1/6$ kWh。将负载与光伏轨迹拼接为特征向量，以平均平方距离衡量样本差异。先保留累计净负荷误差最高、最低的样本，再按距离选取代表点并细化聚类；每个情景的概率为其所属样本数量占比。将代表误差叠加于当前预测并截断为非负值，生成负载与光伏情景。
+
+问题三在每个采用的发布时间分别重建历史误差。样本使用历史上同一发布时间的预报，并执行与当前相同的插值和远端补充规则。预报范围外的补充数据不被当作已发布预报；12月31日的次日前瞻也仅使用届时可得的预报与历史补充，不读取下一年度实测。
+
+\subsection{日内概率更新}
+设$\mathcal O_t$为本次更新以来已观测的区间集合，$z_{\ell,s,k}$、$z_{v,s,k}$分别为情景与实际负载、光伏误差的标准化距离。采用
+\begin{equation}
+D_{s,t}=\frac{1}{2|\mathcal O_t|}\sum_{k\in\mathcal O_t}
+(z_{\ell,s,k}^2+z_{v,s,k}^2),\qquad
+\widetilde\pi_{s,t}=\frac{\pi_s\exp(-D_{s,t}/2)}
+{\sum_r\pi_r\exp(-D_{r,t}/2)},
+\end{equation}
+\begin{equation}
+\pi_{s,t}^{\mathrm{upd}}=0.95\widetilde\pi_{s,t}+0.05\pi_s.
+\end{equation}
+未获得新观测时使用原始概率。问题二以当日0点为起点，问题三在采用新预报后重新构造情景并重置观测起点。保留5\%原始概率，避免某个情景过早失去全部权重。
+
+\subsection{整点预报到区间电量}
+设发布时间为$\tau$，第$j$个预报点对应$\tau+j$小时，$j=1,\ldots,24$。发布时刻的起点取刚结束区间已知光伏功率。对每个十分钟区间，两端的线性插值功率分别为$\widehat P_t^{\mathrm{left}}$和$\widehat P_t^{\mathrm{right}}$，则
+\begin{equation}
+\widehat v_t=\frac{\widehat P_t^{\mathrm{left}}+\widehat P_t^{\mathrm{right}}}{2}\,\frac16.
+\end{equation}
+该式为分段线性功率曲线的精确积分。例如18点发布的第6个预报点对应次日0点，跨日区间按同一规则处理。
+
+\section{当前控制规则与求解处理}\label{app:implementation}
+\subsection{供需方向与可行动作}
+记当前有效供给后的净缺额为$n_t=\ell_t-v_t-q_t$。执行动作满足
+\begin{align}
+n_t\ge0:\quad &c_t=w_t=0,\quad e_t=n_t-d_t,\nonumber\\
+&0\le d_t\le\min\{n_t,5000/6,\eta(E_{t-1}-1200)\};\\
+n_t<0:\quad &d_t=e_t=0,\quad w_t=-n_t-c_t,\nonumber\\
+&0\le c_t\le\min\{-n_t,5000/6,(10800-E_{t-1})/\eta\}.
+\end{align}
+这些规则排除紧急购电主动充电以及当前同时充放电。各情景在当前时段使用同一观测和同一动作，未来动作随情景变化，只用于估计后续成本。
+
+\subsection{问题一的等价最优解}
+先求最小费用$C_1^*$，再在$C_1\le C_1^*+10^{-6}$元的条件下最小化$\sum_t(c_t+d_t)$。若某段$c_t,d_t>0$，取$\delta=\min(c_t,d_t/\eta^2)$，将充电量减少$\delta$、放电量减少$\eta^2\delta$，储电变化不变。产生的$(1-\eta^2)\delta$富余可通过减少购电或增加弃光平衡；原平衡式保证两者合计空间足够。在非负电价下，此操作不会增加费用。独立检查确认最终各段没有同时充放电。
+
+\subsection{调整判定与数值重求解}
+问题三在同一情景、实际储电量和末端条件下，分别求保持当前有效计划与允许调整的预计费用。改善不超过0.01元时保留当前计划；否则在最优费用$10^{-6}$元容差内，优先最小化相对当前有效版本的绝对变更电量。最终账单仍相对0点原计划计算。
+
+求解器状态异常时，先对同一线性规划冷启动重求解；仍失败才执行可行储能规则，购电修订失败则保持原有效计划。问题二主方案在6月1日和12月3日各有一次首次状态异常，问题三主方案在10月16日有一次；均在同模型冷启动后得到最优解。问题二三组可执行策略与问题三十组全年策略均未触发最终失败回退。
+
+\section{指定日期的敏感性结果}\label{app:sensitivity}
+各实验使用对应主方案在该日期的历史信息和日初储电量，只改变情景数量或规划末端目标。表中费用与紧急量为相对主方案的变化，日末储电量为实验实际值。库存变化另按正文估值校正，因此不能将单日费用差全部理解为算法优劣。
+\begin{table}[htbp]\centering\scriptsize
+\caption{问题二的同起点敏感性比较}\label{tab:q2sensitivity}
+\resizebox{\textwidth}{!}{\input{tables/q2_sensitivity}}
+\end{table}
+\begin{table}[htbp]\centering\scriptsize
+\caption{问题三的同起点敏感性比较}\label{tab:q3sensitivity}
+\resizebox{\textwidth}{!}{\input{tables/q3_sensitivity}}
+\end{table}
+
+\clearpage
+\section{计算材料与结果索引}
+计算程序以十分钟电量为单位读取输入，并按日保存预测、购电计划、储电状态和实际结算。下表列出与正文对应的复现材料，完整逐段结果保存在随文工作簿中。
+\begin{table}[htbp]\centering\small
+\caption{计算与复现材料}
+\begin{tabular}{ll}\toprule
+材料 & 对应内容\\\midrule
+\texttt{code/solve\_q1.py} & 问题一线性规划与效率对照\\
+\texttt{code/solve\_q2.py} & 问题二日前计划与连续执行\\
+\texttt{code/solve\_q3.py} & 问题三预报更新与调整结算\\
+\texttt{results/result1.xlsx} & 单日指定结果与144段购电\\
+\texttt{results/result2.xlsx} & 334天计划、储能与紧急购电\\
+\texttt{results/result3.xlsx} & 334天原计划、调整、储能与紧急购电\\
+\texttt{code/plot\_q1.m}等 & MATLAB绘图源程序\\
+\texttt{paper/main.tex} & 论文编译入口\\
+\bottomrule\end{tabular}
+\end{table}
+问题一由\texttt{solve\_q1.py}生成数值与表格，再运行\texttt{export\_xlsx.mjs}导出工作簿。问题二、三先完成各策略求解与敏感性实验，再分别运行\texttt{report\_q2.py}、\texttt{report\_q3.py}生成论文表格与宏命令，随后运行\texttt{export\_q2\_xlsx.mjs}、\texttt{export\_q3\_xlsx.mjs}导出工作簿。最后执行MATLAB的\texttt{plot\_overview}及三个分问绘图入口，并用XeLaTeX编译论文两次。完整参数与命令顺序见随文复现说明。
+
+所有表格和图形从相应结果文件读取数值，不以显示精度截断后重新计算费用。

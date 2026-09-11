@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "pages": 41,
+  "retained_files": 9,
+  "annual_variants": 11,
+  "annual_days_per_variant": 334,
+  "reserve_experiments": 8,
+  "monochrome_vector_figures": 22,
+  "workbooks": [
+    {
+      "workbook": "result4-2",
+      "days": 334,
+      "plan_intervals": 48096,
+      "storage_rows": 2004,
+      "worksheets": [
+        "计划购电量",
+        "充放电量",
+        "紧急购电量"
+      ],
+      "passed": true
+    },
+    {
+      "workbook": "result4-3",
+      "days": 334,
+      "plan_intervals": 48096,
+      "storage_rows": 2004,
+      "worksheets": [
+        "计划购电量",
+        "调整购电量",
+        "充放电量",
+        "紧急购电量"
+      ],
+      "passed": true
+    }
+  ],
+  "layout_warnings": [],
+  "pdf_sha256": "9a6e9342311e86c08cc4f6acc94419920d739d92aa1d969948f73b19adf6e094"
+}

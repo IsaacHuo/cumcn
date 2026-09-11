@@ -1,0 +1,60 @@
+{
+  "runs": [
+    {
+      "question": "q2",
+      "date": "2025-03-20",
+      "total_cost": 64575.56403676857,
+      "emergency_total": 4201.645344999995,
+      "final_soc": 5040.748740555556
+    },
+    {
+      "question": "q2",
+      "date": "2025-06-21",
+      "total_cost": 35107.53205556583,
+      "emergency_total": 1536.8107205658446,
+      "final_soc": 9793.751721481482
+    },
+    {
+      "question": "q2",
+      "date": "2025-09-23",
+      "total_cost": 113625.03536577437,
+      "emergency_total": 11386.973567370002,
+      "final_soc": 9423.557171481483
+    },
+    {
+      "question": "q2",
+      "date": "2025-12-21",
+      "total_cost": 121634.3620191374,
+      "emergency_total": 8515.408893666663,
+      "final_soc": 9420.65979037037
+    },
+    {
+      "question": "q3",
+      "date": "2025-03-20",
+      "total_cost": 65370.86015729538,
+      "emergency_total": 4353.064621697298,
+      "final_soc": 4505.706129132566
+    },
+    {
+      "question": "q3",
+      "date": "2025-06-21",
+      "total_cost": 24579.847026608382,
+      "emergency_total": 0.0,
+      "final_soc": 10755.784090733168
+    },
+    {
+      "question": "q3",
+      "date": "2025-09-23",
+      "total_cost": 48565.33235720741,
+      "emergency_total": 613.1874936368283,
+      "final_soc": 8166.234839999999
+    },
+    {
+      "question": "q3",
+      "date": "2025-12-21",
+      "total_cost": 67976.10135220696,
+      "emergency_total": 707.807677186825,
+      "final_soc": 8074.693673001852
+    }
+  ]
+}

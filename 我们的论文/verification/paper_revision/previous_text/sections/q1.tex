@@ -1,0 +1,80 @@
+\section{问题一的日前购电与储能调度}
+\subsection{问题分析与数据口径}
+问题一在每天0:00给定全天电价、负载和光伏预测，要求制定购电策略，在满足负载的同时尽量降低购电费用。储能将不同时段连接起来：低价购电或富余光伏可用于充电，但容量、功率和能量损耗限制了可转移的电量。因此，应对全天144个时段联合优化。
+
+将全天0:00--24:00划分为144个连续的十分钟时段，附件一中各时刻的数据对应以该时刻为终点的时段。
+
+各时段内功率及电价按分段常数处理，时长为$\Delta t=1/6$小时。负载功率和光伏功率乘以$\Delta t$得到相应电量。本问采用确定性预测，依据给定的光伏预测功率建立计划能量平衡。
+
+\subsection{假设与符号}
+储能的充电和放电单程效率均取$\eta=0.9$；最大充放电功率5000 kW按微网侧解释。初始储电量采用附录一给定的6000 kWh，日末恢复至该值。不计自放电、寿命折损、启停成本及未给定的购电功率上限。允许弃光但不售电，弃光无收益与费用。
+
+\begin{table}[htbp]\centering
+\caption{主要符号及单位}
+\begin{tabular}{clc}\toprule
+符号 & 含义 & 单位 \\\midrule
+$p_t$ & 第$t$时段购电价格 & 元/kWh \\
+$\ell_t,v_t$ & 负载电量、光伏预测电量 & kWh \\
+$g_t$ & 从外网购入的电量 & kWh \\
+$c_t,d_t$ & 微网侧输入储能、储能输出至微网的电量 & kWh \\
+$w_t$ & 未被利用的光伏电量 & kWh \\
+$E_t$ & 第$t$时段结束时的储电量，$E_0$为日初值 & kWh \\
+\bottomrule\end{tabular}\end{table}
+
+\subsection{优化模型}
+目标函数为全天购电费：
+\begin{equation}\min Z=\sum_{t=1}^{144}p_tg_t.\end{equation}
+微网侧能量平衡为
+\begin{equation}g_t+v_t+d_t=\ell_t+c_t+w_t,\qquad t=1,\ldots,144.\end{equation}
+电池内部储电量满足
+\begin{equation}E_t=E_{t-1}+\eta c_t-d_t/\eta.\end{equation}
+例如，微网向储能输入100 kWh，仅增加90 kWh储电量；该部分电量再次释放时可供微网使用81 kWh。这对应81\%往返效率。
+运行边界为
+\begin{align}
+1200&\le E_t\le10800, &&t=0,\ldots,144,\\
+0&\le c_t,d_t\le 5000/6, &&t=1,\ldots,144,\\
+g_t&\ge0,\quad 0\le w_t\le v_t, &&t=1,\ldots,144,\\
+E_0&=E_{144}=6000.
+\end{align}
+其中$w_t\le v_t$限制弃光量不超过可用光伏电量。首尾储电量相等，使储能在完成当日调度后恢复至初始状态，满足日循环运行要求。
+
+\subsection{求解及同时充放电处理}
+上述目标和约束均为线性，使用HiGHS求解线性规划。先求最小费用$Z^*$，再在$Z\le Z^*+10^{-6}$元的约束下最小化$\sum_t(c_t+d_t)$，从费用等价的策略中选取周转量较低的方案。这一辅助目标不被计入实际购电费。
+
+本问所有电价均非负且允许弃光，因此没有必要通过同时充放电消耗能量。具体地，若$c_t,d_t>0$，取$\delta=\min(c_t,d_t/\eta^2)$，将充电量减少$\delta$、放电量减少$\eta^2\delta$，储电量变化不变，同时产生$(1-\eta^2)\delta$的可释放电量。该部分可以通过减少购电或增加弃光平衡，且原能量平衡保证两者合计空间足够。因此可在不增加费用的情况下减少能量周转。
+
+所得最优方案中，各时段充电量与放电量均不同时为正，满足储能充放电互斥的运行要求。
+
+\subsection{计算结果与经济解释}
+表\ref{tab:purchase}和表\ref{tab:storage}分别给出题目指定的购电结果及储能结果。表内电量单位为kWh，费用单位为元，显示四位小数；核验采用未舍入数值。
+\begin{table}[htbp]\centering\small
+\caption{指定时段购电量与全天指标}\label{tab:purchase}
+\input{tables/q1_purchase}
+\end{table}
+\begin{table}[htbp]\centering\small
+\caption{各四小时时段充放电量及首尾储电量}\label{tab:storage}
+\input{tables/q1_storage}
+\end{table}
+
+无储能基准取$g_t^{(0)}=\max(\ell_t-v_t,0)$，光伏富余直接弃光。其购电费为\BaseCost\ 元；优化方案节省\Saving\ 元，降幅为\SavingPercent\%。基准弃光量为\BaseCurtail\ kWh，主方案无弃光。全天储能输入\ChargeTotal\ kWh、向微网输出\DischargeTotal\ kWh，两者相差\LossTotal\ kWh，恰为本日储能损耗。
+
+储能的价值来自吸收富余光伏与转移不同时段的购电需求。对单纯外网充电再放电的路径，若低价时刻价格为$p_a$，高价时刻价格为$p_b$，每向负载交付1 kWh需提前购入$1/\eta^2$ kWh；忽略其他约束时，仅当$p_b>p_a/\eta^2$才具有套利空间。实际调度还需协调后续光伏消纳与高价负载供电的容量需求。所得方案在部分光伏富余时段同时购电充电，通过联合利用光伏与低价外网电能，为后续高价时段供电。
+
+
+
+\subsection{模型检验与效率敏感性}
+对所得方案逐时段检验能量平衡、储电量递推及设备运行边界，并核对全天能量守恒关系：
+\begin{equation}
+\sum_t g_t+\sum_t v_t=\sum_t\ell_t+\sum_t w_t+
+\sum_t\left[(1-\eta)c_t+(\eta^{-1}-1)d_t\right],
+\end{equation}
+其中已使用$E_{144}=E_0$。能量平衡与储电量递推的残差均小于$10^{-5}$ kWh，且所有时段均满足运行边界和充放电互斥要求。
+
+为分析储能效率对经济性的影响，保持其他条件不变，将充放电单程效率由0.9同时提高至$\sqrt{0.9}$，即将往返效率由81\%提高至90\%。重新优化后，购电费为\AltCost\ 元，相比原方案变化\AltDifference\ 元。这表明提高储能效率可减少能量转移损耗，进一步降低购电费用。
+
+本模型适用于负载、电价及光伏出力已知的确定性调度场景，尚未计入预测误差和电池衰减。实际运行中的预测偏差会改变供需平衡，需要进一步引入实时修正机制。
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.96\textwidth,height=0.64\textheight,keepaspectratio]{figures/q1_dispatch.pdf}
+\caption{十分钟购电调度、电池储电量与电价。放电在第二子图中以负向显示，模型中的放电量仍取非负值。}\label{fig:q1}
+\end{figure}
+\clearpage

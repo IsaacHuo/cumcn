@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "protected_files_unchanged": 9,
+  "simple_loss_kwh": 3940.726562655018,
+  "expanded_loss_kwh": 3940.726562655015,
+  "loss_difference_kwh": 2.7284841053187847e-12,
+  "energy_residual_kwh": 3.637978807091713e-12,
+  "initial_kwh": 6000.0,
+  "final_kwh": 6000.0,
+  "efficiency_experiment_removed_from_paper": true,
+  "pages": 26,
+  "compile_warnings": [],
+  "pdf_sha256": "38ca76bb4e3e4d5bb249214357ece64c4cb91dc22eef9a5af25729d606f72931",
+  "abstract_single_page": true,
+  "visual_recheck": "Omitted per user instruction; compilation and numerical checks only"
+}

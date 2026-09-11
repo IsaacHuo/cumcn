@@ -1,0 +1,5 @@
+.deps/
+code/node_modules/
+**/__pycache__/
+paper/build/*
+!paper/build/main.pdf

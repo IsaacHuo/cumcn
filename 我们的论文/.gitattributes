@@ -1,0 +1,2 @@
+# Checkpoint manifests use byte hashes; preserve exact source and result bytes.
+* -text

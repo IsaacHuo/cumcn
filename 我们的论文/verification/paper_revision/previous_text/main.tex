@@ -1,0 +1,18 @@
+% !TeX program = xelatex
+\documentclass[withoutpreface,notoc]{cumcmthesis}
+\input{tables/q1_values}
+\input{tables/q2_values}
+\input{tables/q3_values}
+\title{微网日前购电、日内修正与储能滚动调度}
+\begin{document}
+\maketitle
+\begin{abstract}
+针对已知全天负载、电价和光伏预测的日前调度问题，本文以十分钟为决策间隔，建立包含购电、储能充放电和弃光的线性规划模型。模型统一采用微网侧电量，显式计入充放电损耗，并使日末储电量恢复至日初水平。当充电、放电单程效率均为90\%时，全天购电量为\QoneGrid\ kWh，购电费为\QoneCost\ 元；相对无储能基准，费用降低\SavingPercent\%。逐时段能量守恒、储电量递推和设备边界检验表明，所得方案满足运行约束。进一步提高储能效率并重新优化，结果表明能量损耗的降低可改善调度经济性。
+针对预测存在偏差的运行环境，进一步建立历史预测、多情景日前购电与十分钟滚动控制相结合的调度方法。采用48小时规划视野，每日锁定当天计划购电，日内依据当前观测调整储能，并按5倍电价结算紧急补电。以1月为学习期、2月至12月为评价期，334天实际运行费用为\QtwoCost\ 万元，较无储能多情景购电降低\QtwoNoStorageSaving\%，紧急购电发生于\QtwoDays\ 天。相同滚动控制器下的单预测对照与情景数量敏感性检验，揭示了提前购电、未利用供给与高价补电之间的权衡。情景预计费用低于实际执行费用，说明有限历史情景与前瞻松弛仍有局限。
+进一步利用每日四次发布的光伏预报，建立以0点原计划为结算基准的日内购电修正模型。取消部分支付50\%违约费，新增部分按1.5倍电价购买，储能仍按十分钟滚动执行。三个日内预报时刻均采用时，评价期实际费用为\QthreeCost\ 万元，相对仅采用0点预报降低\QthreeSaving\%。通过八种预报组合及仅更新储能的对照，分析预报更新和购电修订的经济作用，并检查结算解释与情景数量对结果的影响。
+\keywords{微网\quad 储能调度\quad 线性规划\quad 多情景优化\quad 滚动控制}
+\end{abstract}
+\input{sections/q1}
+\input{sections/q2}
+\input{sections/q3}
+\end{document}

@@ -1,0 +1,50 @@
+{
+  "variant": "forecast0",
+  "days": 334,
+  "full_year": true,
+  "physical_checks": 334,
+  "settlement_checks": 334,
+  "cross_day_soc_checks": 333,
+  "causal_version_checks": 334,
+  "fallback_events": [],
+  "successful_cold_restarts": [
+    {
+      "date": "2025-04-15",
+      "stage": 0,
+      "interval": 119,
+      "initial_status": "HighsModelStatus.kUnknown",
+      "retry_status": "HighsModelStatus.kOptimal"
+    },
+    {
+      "date": "2025-05-04",
+      "stage": 0,
+      "interval": 129,
+      "initial_status": "HighsModelStatus.kUnknown",
+      "retry_status": "HighsModelStatus.kOptimal"
+    },
+    {
+      "date": "2025-11-30",
+      "stage": 0,
+      "interval": 115,
+      "initial_status": "HighsModelStatus.kUnknown",
+      "retry_status": "HighsModelStatus.kOptimal"
+    },
+    {
+      "date": "2025-12-14",
+      "stage": 0,
+      "interval": 114,
+      "initial_status": "HighsModelStatus.kUnknown",
+      "retry_status": "HighsModelStatus.kOptimal"
+    },
+    {
+      "date": "2025-12-14",
+      "stage": 0,
+      "interval": 116,
+      "initial_status": "HighsModelStatus.kUnknown",
+      "retry_status": "HighsModelStatus.kOptimal"
+    }
+  ],
+  "max_balance_residual": 2.0122570276726037e-11,
+  "max_soc_residual": 2.000177801164682e-12,
+  "max_settlement_residual": 1.4551915228366852e-11
+}

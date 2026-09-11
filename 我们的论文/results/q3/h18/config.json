@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "variant": "h18",
+  "forecast_update_hours": [
+    18
+  ],
+  "adjustment_hours": [
+    18
+  ],
+  "settlement_mode": "refund",
+  "scenario_count": 7,
+  "target": 6000.0,
+  "history_pairs": 28,
+  "prior_mix": 0.05,
+  "min_adjustment_gain_yuan": 0.01,
+  "highspy": "1.15.1",
+  "sha256": {
+    "code\\solve_q3.py": "2ee942e7ae780b02467dbd0d88bca0d69f2f684d7c46e4cbd1123a486017d690",
+    "code\\solve_q2.py": "d673623e0ca488bf1be6ef67cebd89af57303b20b8efd92fb69080053b67a352",
+    "data\\raw\\附件3.xlsx": "8a61b06c52bd0d639a1cc37c61a7d9f5b75edcbca718f64c1bd3498ec9f9d843",
+    "data\\raw\\附件1.xlsx": "66b87134f5ecccd68184d3539bb1293ef039f9e0fdd955a589b9bfa7f227c377",
+    "data\\raw\\附件2.xlsx": "2e95fd446bfafa0d8c59577b5c2e2ea8b3f1def20dde54a3062556f4da9b4c72"
+  }
+}

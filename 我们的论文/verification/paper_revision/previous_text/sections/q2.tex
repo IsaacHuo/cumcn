@@ -1,0 +1,127 @@
+\section{问题二的多情景购电与滚动储能调度}
+\subsection{问题分析与决策信息}
+问题二的负载和光伏出力随日期变化，而当天计划购电量必须在0:00确定。购电不足时，缺口须按相应时段电价的5倍紧急补足；计划购电即使未被利用，仍需支付费用。因此，日前决策需要权衡多购的成本与少购的风险，日内储能则承担缓冲供需偏差的作用。
+
+本文以附件一的电价曲线作为每日固定电价，以附件二的负载和光伏实测值构造历史预测及运行检验。1月作为历史学习期，储能保持初始6000 kWh；评价期为2月1日至12月31日，共334天。每天0:00使用此前完整日期的数据制定计划。日内将十分钟区间内的功率视为可即时测得的常值，当前动作只依赖当前及此前观测。
+
+储电量按实际充放电连续递推，满足
+\begin{equation}E_{d+1,0}=E_{d,144}.
+\end{equation}
+为兼顾次日用电，采用覆盖当天与次日的48小时规划视野，并将视野末端储电量设为6000 kWh。当天购电量锁定后，次日部分仅作为前瞻安排，在次日0:00重新优化；6000 kWh是远端规划条件，不是每日实际午夜状态的强制值。
+
+\subsection{历史预测与联合误差情景}
+记$L_{d,t}$和$P_{d,t}$为第$d$日第$t$段的负载、光伏电量。日前预测采用
+\begin{align}
+\widehat L_{d,t}&=L_{d-7,t},&\widehat L_{d+1,t}&=L_{d-6,t},\\
+\widehat P_{d,t}&=P_{d-1,t},&\widehat P_{d+1,t}&=P_{d-1,t}.
+\end{align}
+负载预测保留周周期，光伏预测采用最近一天的出力形状。这两种方法不引入额外外部资料，使调度对历史误差的处理可以单独评价。
+
+对每个历史起点$j$，仅利用其当时可见的信息生成48小时预测，并在两天均结束后计算负载与光伏误差。取最近28个完整误差样本，不足28个时使用已有样本。每个样本同时保留负载、光伏及连续两天的时段结构，避免独立抽样破坏误差相关性。
+
+按照标准化误差轨迹的距离选取7个代表样本。其中保留累计净负荷误差最高和最低的样本，其余通过聚类代表点选取，以各簇的历史样本频率作为概率$\pi_s$。将代表误差加到当前预测，并截断为非负值，得到情景$\ell_{s,t},v_{s,t}$。对零方差或极低方差时段，标准化尺度下限取$1/6$ kWh，避免误差距离出现数值放大。
+
+日内依据已观测前缀调整情景概率。令$D_{s,t}$为截至当前时段、负载与光伏标准化误差的平均平方距离，则
+\begin{equation}
+\widetilde\pi_{s,t}=\frac{\pi_s\exp(-D_{s,t}/2)}{\sum_r\pi_r\exp(-D_{r,t}/2)},\qquad
+\pi_{s,t}^{\mathrm{upd}}=0.95\widetilde\pi_{s,t}+0.05\pi_s.
+\end{equation}
+保留少量原始概率，使暂时不匹配的历史情景仍可参与后续风险评价。
+
+\subsection{日前多情景优化}
+在48小时视野内，各情景共用计划购电量$g_t$，储能及供需偏差变量随情景变化。目标函数为
+\begin{equation}
+\min J=\sum_{t=1}^{288}p_tg_t+\sum_s\pi_s\sum_{t=1}^{288}5p_te_{s,t},
+\end{equation}
+其中$e_{s,t}$为紧急购电量。电价曲线按日重复，各情景满足
+\begin{align}
+g_t+v_{s,t}+d_{s,t}+e_{s,t}&=\ell_{s,t}+c_{s,t}+w_{s,t},\\
+E_{s,t}&=E_{s,t-1}+0.9c_{s,t}-d_{s,t}/0.9,\\
+1200\le E_{s,t}&\le10800,\qquad 0\le c_{s,t},d_{s,t}\le5000/6,\\
+g_t,e_{s,t}&\ge0,\qquad 0\le w_{s,t}\le g_t+v_{s,t},\\
+E_{s,0}&=E_{d,0},\qquad E_{s,288}=6000.
+\end{align}
+$w_{s,t}$表示未利用的供给，包括未消纳的光伏及已付费但未使用的计划电量，不能改变电池内部储电量。优化完成后，只锁定前144段购电量。
+
+情景内未来储能轨迹可随整条情景变化，因此上述模型是前瞻松弛，可能低估日内应对的不确定性。它用于选择日前计划和估计未来价值；实际运行费用由逐步执行得到，不将情景目标值视作可实现的全年最优费用。
+
+\subsection{十分钟滚动执行与费用结算}
+每个十分钟时段，依据实际储电量与当前负载、光伏观测更新模型，固定当天剩余购电计划，重新优化至次日24:00。当前情景共享相同观测，并约束各情景的当前充放电动作相同；仅执行该共同动作，未来情景动作留待下一时段重新决策。
+
+记当前计划供电后的净缺额为$n_t=\ell_t-v_t-g_t$。当前动作须满足以下运行规则：
+\begin{align}
+n_t\ge0:\quad &c_t=w_t=0,\qquad e_t=n_t-d_t,\\
+&0\le d_t\le\min\{n_t,5000/6,0.9(E_{t-1}-1200)\};\\
+n_t<0:\quad &d_t=e_t=0,\qquad w_t=-n_t-c_t,\\
+&0\le c_t\le\min\{-n_t,5000/6,(10800-E_{t-1})/0.9\}.
+\end{align}
+上述规则使紧急电量仅补足当前负载缺口，并避免同时充放电。放电量不必总取最大值：在当前电价较低、后续高价缺电风险较高时，保留部分储电量可能更经济。
+
+实际当日费用为
+\begin{equation}C_d=\sum_{t=1}^{144}p_tg_{d,t}+\sum_{t=1}^{144}5p_te_{d,t}.
+\end{equation}
+计划购电按锁定数量全额支付，未利用计划电量不退款。表中分别报告计划电量与紧急电量，其和为总购电量；未利用供给中的光伏部分不计购电费用。
+
+\subsection{对照结果与指定日期策略}
+设置三组可执行策略：无储能多情景购电、单预测日前计划配合同一多情景滚动控制器，以及多情景日前计划配合滚动控制器。除日前购电模型或是否配置储能外，保持数据、执行信息和评价区间一致。无储能时，各时段最优计划为净负荷情景分布的非负80\%分位数，这是普通电价与5倍紧急电价的直接结果。
+无储能对照关闭充放电，初始库存保持不变且不参与供电。
+
+另在完整评价期内使用所有实测负载与光伏，计算完全信息下界。其初始储电量为6000 kWh，期末仅受容量边界约束，因而对各可执行方案均构成费用下界，但不能作为在线策略。
+
+\begin{table}[htbp]\centering\scriptsize
+\caption{评价期策略比较}\label{tab:q2compare}
+\resizebox{\textwidth}{!}{\input{tables/q2_comparison}}
+\end{table}
+多情景主方案实际费用为\QtwoCost\ 万元，其中计划购电费为\QtwoPlanCost\ 万元、紧急购电费为\QtwoEmergencyCost\ 万元；紧急购电共\QtwoEmergency\ kWh，发生于\QtwoDays\ 天。相对无储能多情景购电，费用降低\QtwoNoStorageSaving\%。
+\input{tables/q2_comparison_text}
+
+完全信息下界为\QtwoLower\ 万元，主方案高于该下界\QtwoGap\%。此差距同时包含预测不确定性与前瞻近似的影响，不能完全归因于求解算法。主方案情景预计的紧急购电费合计为\QtwoExpectedEmergency\ 万元，与实际紧急购电费的差异反映了规划估值与在线执行之间的偏差。
+这里对每天日前模型的前144段预计紧急费用求和，与同日实际费用配对比较，避免重复计入重叠的第二天规划。实际紧急费用明显高于预计值，说明历史情景和情景内未来调度对缺电风险的估计仍偏乐观。
+
+\begin{table}[htbp]\centering\scriptsize
+\caption{指定日期的费用、电量与首尾储电量（费用单位：元；电量单位：kWh）}\label{tab:q2days}
+\resizebox{\textwidth}{!}{\input{tables/q2_selected_summary}}
+\end{table}
+\begin{table}[htbp]\centering\small
+\caption{指定时段的计划购电量（kWh）}\label{tab:q2purchase}
+\input{tables/q2_purchase}
+\end{table}
+\begin{table}[htbp]\centering\scriptsize
+\caption{指定日期各四小时时段的充放电量（kWh）}\label{tab:q2storage}
+\resizebox{\textwidth}{!}{\input{tables/q2_storage}}
+\end{table}
+\begin{table}[htbp]\centering\small
+\caption{指定日期的紧急购电区间及电量}\label{tab:q2emergency}
+\input{tables/q2_emergency}
+\end{table}
+表\ref{tab:q2days}至表\ref{tab:q2emergency}给出题目指定日期的策略。连续发生紧急购电的十分钟区间合并列示，不跨日合并。
+
+\begin{figure}[p]\centering
+\includegraphics[width=\textwidth,height=.72\textheight,keepaspectratio]{figures/q2_year.pdf}
+\caption{评价期月度购电费用与每日紧急购电量。}\label{fig:q2year}
+\end{figure}
+\begin{figure}[p]\centering
+\includegraphics[width=\textwidth,height=.66\textheight,keepaspectratio]{figures/q2_compare.pdf}
+\caption{策略费用与紧急购电量比较。完全信息结果仅作为理论参照。}\label{fig:q2compare}
+\end{figure}
+
+\subsection{检验、敏感性与模型局限}
+逐时段检验能量平衡、储电量递推、设备上下界、充放电互斥及跨日状态连续，并分别复算计划与紧急购电费用。各项能量及费用残差均低于$10^{-5}$的相应单位容差。对零预测误差、光伏骤降、负载骤升及电池处于上下限的场景，控制器均给出可行当前动作；改变未来实测数据，不改变此前的购电计划与执行动作。
+
+不同策略的期末储电量可能不同。以最低时段电价对应的补充储电成本作统一库存估值，定义
+\begin{equation}
+\lambda=\frac{\min_t p_t}{0.9}=\QtwoInventoryPrice\ \text{元/kWh},\qquad
+C^{\mathrm{adj}}=C-\lambda(E_{\mathrm{end}}-6000).
+\end{equation}
+该量仅用于比较，实际账单仍为$C$。库存校正后，多情景方案与单预测方案的费用差为\QtwoAdjustedDifference\ 元。
+
+保持各指定日期的历史信息和日初实际储电量一致，分别采用14个情景及4800、7200 kWh远端储电目标，重新执行当日策略，结果见表\ref{tab:q2sensitivity}。这些实验属于同起点的单日敏感性比较，不据此推断全年运行结果，也不用于回调主方案参数。
+\begin{table}[htbp]\centering\scriptsize
+\caption{指定日期的敏感性比较（变化量相对主方案）}\label{tab:q2sensitivity}
+\resizebox{\textwidth}{!}{\input{tables/q2_sensitivity}}
+\end{table}
+
+本方法用有限历史轨迹表示未来误差。季节转换或历史窗口中较少出现的突发变化，可能使真实偏差超出情景覆盖范围；日内权重更新只能调整已有情景的相对可信度。未来情景的储能应对仍采用前瞻松弛，因此模型优势应以实际费用和紧急购电的联合表现衡量，而不能仅凭情景目标值判断。
+在这四个日期中，增加情景数量对费用的影响并不一致，其中9月23日的改善较明显，反映出代表轨迹选择会影响风险覆盖。远端目标在4800至7200 kWh范围内变化未明显改变当日费用；这一现象只适用于所检验的日期与参数，不能据此忽略其他运行条件下的末端效应。
+\input{tables/q2_selected_figures}
+\clearpage

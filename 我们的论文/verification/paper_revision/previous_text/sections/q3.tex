@@ -1,0 +1,98 @@
+\section{问题三的预报更新与购电调整}
+\subsection{调整交易的结算与经济含义}
+问题三允许在6:00、12:00和18:00获得新的光伏预报，并据此调整尚未交付的购电量。其作用不仅是提高储能调度对供需变化的适应能力，还包括提前修正购电不足或过量的安排。评价这些调整时，需要同时计入紧急补电、取消计划和新增购电的费用。
+
+记$g_t$为0:00制定的原计划，$a_t$为第$t$段实际交付的最终有效购电量。本文假设取消部分只支付原价的50\%作为违约费，即退回取消部分的原购电费后收取违约金；新增部分按1.5倍电价购买。定义
+\begin{equation}
+\delta_t^+=(a_t-g_t)^+,\qquad \delta_t^-=(g_t-a_t)^+,
+\end{equation}
+则当天实际费用为
+\begin{align}
+C_d&=\sum_t p_tg_t-\sum_t p_t\delta_t^-+\sum_t0.5p_t\delta_t^-
+       +\sum_t1.5p_t\delta_t^++\sum_t5p_te_t\\
+&=\sum_t\left[p_tg_t-0.5p_t\delta_t^-+1.5p_t\delta_t^++5p_te_t\right].
+\end{align}
+例如，电价为1元/kWh，某段原计划100 kWh，最终减至80 kWh，其非紧急费用为90元。若先改为80 kWh、后改为90 kWh，则按最终数量结算95元。每段始终相对0点原计划计算一次偏差，不对历次预报版本重复计费。
+
+取消的电量不再交付，不能继续供给负载或给电池充电；已经交付但未利用的电量仍收费。实际能量平衡采用
+\begin{equation}
+a_t+P_t+d_t+e_t=L_t+c_t+w_t.
+\end{equation}
+储电量递推、容量边界、功率上限及单程效率均与问题二相同。通过非负变量$\delta_t^+,\delta_t^-$及等式$a_t-g_t=\delta_t^+-\delta_t^-$可将结算函数线性化。同时增加二者会使费用上升，因此费用最小解不会同时出现无意义的增购和减购。
+
+\subsection{滚动预报与十分钟电量映射}
+附件三在每日四个发布时刻提供随后24个整点的光伏功率预报。设发布时间为$\tau$，第$j$个点对应$\tau+j$小时。以刚结束区间的已知光伏功率作为$\tau$处的起点，对相邻整点进行分段线性插值。若十分钟区间两端的插值功率为$\widehat P_t^{\mathrm{left}}$和$\widehat P_t^{\mathrm{right}}$，则该段预测电量为
+\begin{equation}
+\widehat V_t=\frac{\widehat P_t^{\mathrm{left}}+\widehat P_t^{\mathrm{right}}}{2}\times\frac{1}{6}.
+\end{equation}
+该转换保留整点功率信息，并对所假定的线性变化进行积分。18:00发布的第6个点对应次日0:00，跨日预报也参与储能前瞻。
+
+规划终点仍为次日24:00。对当前24小时预报覆盖不到的远端时段，使用最近完整一天对应时段的光伏电量作补充预测；负载沿用上周同一时段预测。补充部分仅用于前瞻，不视为新发布的预报。评价期和初始状态仍为2月1日至12月31日、6000 kWh，实际储电量连续跨日传递。
+
+对每个发布时间分别重建历史预测误差：在历史起点只使用其当时可见的实测与对应预报，按上述规则补足规划范围，再与随后两日实测比较。采用最近28个完整历史样本及7个代表情景，保留配对的负载、光伏轨迹和净负荷极端。采用新预报后重新构造情景；本次发布以来的实测误差用于更新概率，保留5\%原始权重。这样既避免使用尚未发布的预报，也不将上一版本的误差直接当作新版本误差。
+
+\subsection{日前计划、日内调整与实时执行}
+0:00依据当时预报建立问题二形式的多情景日前模型，确定当天144段原计划。日内采用新预报时，给定实际储电量和已执行区间，对当天剩余区间的$a_t$共同优化，各情景允许不同的储能与紧急补电。目标包括当天剩余交易的结算费用、期望紧急购电费，以及次日前瞻购电费；远端储电目标为6000 kWh。
+
+每次优化都保留当前有效购电计划作为可行候选。在相同情景、状态和末端条件下，分别计算保持计划与允许调整的最优预计费用；若改善不超过0.01元，则保持当前计划。否则在最优费用数值容差内，优先选取总变更电量较小的方案。该判断使用已经包含调整费用的目标值，不再额外扣除一次违约费或增购费。
+
+在两个预报发布时间之间，每十分钟固定当前有效计划，更新观测与实际储电量，重新优化储能并只执行当前共同动作。当前供给有盈余时只允许充电或舍弃；存在缺额时只允许放电或紧急补电。次日购电及未来情景动作仅作为前瞻，随后重新决策。由于没有在0点预先构造未来所有预报版本的决策树，本方法是分时修正策略，而不是完整多阶段随机规划的全局最优解。
+
+\subsection{全年对照与预报时刻的价值}
+对6、12、18点预报的全部八种选用组合进行独立连续回测，0点预报始终采用。另设接受全部预报但仅调整储能的策略，以区分信息更新和修改购电量的作用。各策略均保留不调整的选择，所有费用由最终交付量与实际紧急购电结算。
+
+\begin{table}[htbp]\centering\scriptsize
+\caption{问题三各策略的334天实际运行结果}\label{tab:q3compare}
+\resizebox{\textwidth}{!}{\input{tables/q3_comparison}}
+\end{table}
+三个时刻均采用的主方案总费用为\QthreeCost\ 万元，紧急购电量为\QthreeEmergency\ kWh，发生于\QthreeDays\ 天。以仅采用0点预报为基准，费用减少\QthreeDifference\ 元，降幅为\QthreeSaving\%。费用构成为原计划金额\QthreePlanCost\ 万元，扣除取消部分退款\QthreeRefund\ 万元，加上违约费\QthreePenalty\ 万元、增购费\QthreeExtra\ 万元和紧急购电费\QthreeEmergencyCost\ 万元。
+
+\input{tables/q3_information_text}
+\input{tables/q3_findings}
+
+\begin{figure}[p]\centering
+\includegraphics[width=\textwidth]{figures/q3_compare.pdf}
+\caption{预报选用及调整策略的费用与紧急购电比较。}
+\end{figure}
+\begin{figure}[p]\centering
+\includegraphics[width=\textwidth]{figures/q3_year.pdf}
+\caption{主方案逐月购电费用构成。净基础费用为原计划金额减去取消部分退款。}
+\end{figure}
+
+\subsection{指定日期与敏感性分析}
+表\ref{tab:q3selected}至表\ref{tab:q3emergency}给出四个指定日期的计划、最终调整量及实际储能运行。调整后电量指非紧急交付量，加上紧急电量才是总购电量。
+\begin{table}[htbp]\centering\scriptsize
+\caption{指定日期的电量、总费用及首尾储电量（电量单位：kWh）}\label{tab:q3selected}
+\resizebox{\textwidth}{!}{\input{tables/q3_selected}}
+\end{table}
+\begin{table}[htbp]\centering\scriptsize
+\caption{指定时段的原计划与最终调整电量（kWh）}\label{tab:q3purchase}
+\resizebox{\textwidth}{!}{\input{tables/q3_purchase}}
+\end{table}
+\begin{table}[htbp]\centering\scriptsize
+\caption{指定日期各四小时区间的实际充放电量（kWh）}\label{tab:q3storage}
+\resizebox{\textwidth}{!}{\input{tables/q3_storage}}
+\end{table}
+\begin{table}[htbp]\centering\small
+\caption{指定日期连续紧急购电区间及电量}\label{tab:q3emergency}
+\input{tables/q3_emergency}
+\end{table}
+
+主方案期末储电量为\QthreeEnd\ kWh。采用问题二相同的补充储电成本估值后，主方案相对0点基准的费用减少量为\QthreeInventoryDifference\ 元。完全信息费用下界仍为\QthreeLower\ 万元：对任意交付量，调整结算费用不低于按普通电价直接购买该交付量的费用，因此原完全信息问题仍提供有效下界。
+
+为检验结算解释的影响，另将取消部分改为原计划照付并追加0.5倍违约费，完整重算全部预报方案，得到\QthreeLiteralCost\ 万元。在允许免费舍弃余电时，这一口径下减购通常没有优势：维持供给并舍弃多余电量即可避免新增违约费。因此，结算机制本身会改变调整方向，不能把不同机制下的结果直接归结为预报质量。
+
+在四个指定日期固定历史信息与主方案日初状态，分别增加至14个情景，或改变远端储电目标，结果见表\ref{tab:q3sensitivity}。这些是同起点的单日检验，不用于重新选择全年主参数。
+\begin{table}[htbp]\centering\scriptsize
+\caption{问题三的单日敏感性比较（变化量相对主方案）}\label{tab:q3sensitivity}
+\resizebox{\textwidth}{!}{\input{tables/q3_sensitivity}}
+\end{table}
+
+\subsection{检验与局限}
+通过逐段复算能量平衡、储电量递推及交易分项，检查最终交付量与各时刻计划版本的一致性。改变未来实测或尚未发布的预报，不改变此前计划和执行动作；整点至十分钟的转换还通过常数功率、线性功率及跨午夜算例检验。全部策略的物理和费用残差均低于$10^{-5}$的相应单位容差。
+
+十组全年实验均未触发维持计划或可行规则的求解失败回退。主方案出现一次求解状态异常，对同一线性规划冷启动重求解后获得最优解，实际执行仍采用优化结果。
+
+新预报带来调整机会，但不保证每次实际费用都下降。有限历史情景可能遗漏突发偏差，线性插值忽略小时内更快的变化，远端补充预测和情景内储能前瞻也具有近似性。保持当前计划的候选检查保证的是同一模型中的预计费用关系；预报发布后的真实运行仍应由实际账单评价。本文仅比较附件提供的发布时间，不对未提供预报的其他时刻推断收益。
+\input{tables/q3_figure}
+\clearpage

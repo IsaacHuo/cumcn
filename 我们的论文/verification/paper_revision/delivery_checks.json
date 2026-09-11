@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "pages": 26,
+  "protected_files_unchanged": 9,
+  "figures": {
+    "overview_flow": {
+      "vector": true,
+      "monochrome": true
+    },
+    "overview_inputs": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q1_dispatch": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q2_compare": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q2_day_20250320": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q2_day_20250621": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q2_day_20250923": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q2_day_20251221": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q2_year": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q3_compare": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q3_day_20250320": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q3_day_20250621": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q3_day_20250923": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q3_day_20251221": {
+      "vector": true,
+      "monochrome": true
+    },
+    "q3_year": {
+      "vector": true,
+      "monochrome": true
+    }
+  },
+  "matlab_checks": {
+    "passed": true,
+    "monochrome_figures": 15,
+    "input_units_checked": true,
+    "representative_days_checked": 8
+  },
+  "sha256": {
+    "paper\\build\\main.pdf": "7a7aad770e3224b37b7ae0d76a380f06424091a45c2e63d969bb17d8d6069b13",
+    "paper\\sections\\appendix.tex": "ce37672270cf7d7d2a1cb852239e2c90b07b6efd3b1d94c739c060929bc83d2b",
+    "paper\\sections\\assessment.tex": "20ce6038396e2ddb47a5d58b90c81096c3e713d7b56bc61f17bd12edf1fec79e",
+    "paper\\sections\\foundation.tex": "3993542ea1ebd12ae1fd4567eb4299f07761c8b2050a54f56d01ced044890992",
+    "paper\\sections\\q1.tex": "7410047690333d5aa876bb4e27d28bddac6f4ea66ff4c64aea9a3a63744a5673",
+    "paper\\sections\\q2.tex": "7e6c38286e05d60f4ff5e9ebee246099eb30996fbd07c674707342135e7f8f52",
+    "paper\\sections\\q3.tex": "0aa782a94f51a0c29ce7124013738c288dab3ee3f7482d6884108fc993be10d6",
+    "paper\\sections\\references.tex": "7dda212a377523e36bbe443d7e457a80477deb396688ec24c53d48de0fa9cbf8",
+    "code\\plot_overview.m": "9fdb4a8b1e8fb1f2934ebf51cf6023430be24e6d1d55fa7877829574ad0705e6",
+    "code\\plot_q1.m": "1742f83fe8a7ffb26ce4533b84d9539fdf564aa4408f3674e5b16cce08bab136",
+    "code\\plot_q2.m": "12e0a340c5279aac6495f297094607ba6d95168c9d55d030508fe0a4b7578f27",
+    "code\\plot_q3.m": "af309deacbf4db799dd57f1f55ede8e33299e917f08665e5934315dd3773ca79"
+  }
+}
