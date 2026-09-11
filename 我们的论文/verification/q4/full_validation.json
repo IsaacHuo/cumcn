@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "variants": [
+    {
+      "variant": "q2",
+      "days": 334,
+      "max_balance": 1.1800693755503744e-10,
+      "max_state": 2.3647750424515834e-12,
+      "failures": 0,
+      "recoveries": 4
+    },
+    {
+      "variant": "forecast0",
+      "days": 334,
+      "max_balance": 1.1823431123048067e-11,
+      "max_state": 2.4442670110147446e-12,
+      "failures": 0,
+      "recoveries": 0
+    },
+    {
+      "variant": "h6",
+      "days": 334,
+      "max_balance": 1.8530954548623413e-11,
+      "max_state": 3.730349362740526e-12,
+      "failures": 0,
+      "recoveries": 3
+    },
+    {
+      "variant": "h12",
+      "days": 334,
+      "max_balance": 3.3651303965598345e-11,
+      "max_state": 7.277733971022826e-12,
+      "failures": 0,
+      "recoveries": 0
+    },
+    {
+      "variant": "h18",
+      "days": 334,
+      "max_balance": 2.311777436148077e-09,
+      "max_state": 3.637978807091713e-12,
+      "failures": 0,
+      "recoveries": 0
+    },
+    {
+      "variant": "h6_12",
+      "days": 334,
+      "max_balance": 6.821210263296962e-11,
+      "max_state": 1.2732925824820995e-11,
+      "failures": 0,
+      "recoveries": 0
+    },
+    {
+      "variant": "h6_18",
+      "days": 334,
+      "max_balance": 6.719005796185229e-09,
+      "max_state": 3.730349362740526e-12,
+      "failures": 0,
+      "recoveries": 0
+    },
+    {
+      "variant": "h12_18",
+      "days": 334,
+      "max_balance": 5.799051905341912e-09,
+      "max_state": 7.277733971022826e-12,
+      "failures": 0,
+      "recoveries": 0
+    },
+    {
+      "variant": "main",
+      "days": 334,
+      "max_balance": 6.666709850833286e-09,
+      "max_state": 1.2732925824820995e-11,
+      "failures": 0,
+      "recoveries": 0
+    },
+    {
+      "variant": "q2_point",
+      "days": 334,
+      "max_balance": 1.261923898709938e-11,
+      "max_state": 4.934719299853896e-12,
+      "failures": 0,
+      "recoveries": 5
+    },
+    {
+      "variant": "main_point",
+      "days": 334,
+      "max_balance": 2.172328095184639e-09,
+      "max_state": 9.094947017729282e-12,
+      "failures": 0,
+      "recoveries": 2
+    }
+  ],
+  "events": []
+}
