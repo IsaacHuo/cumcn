@@ -1,0 +1,58 @@
+[
+  {
+    "source": "C题/C题原题.pdf",
+    "copy": "data/raw/C题原题.pdf",
+    "sha256": "2c098f6ae9dd47ae965aebdec3b9facf3de6c173f999783c1012c08fc5fb9d2d"
+  },
+  {
+    "source": "C题/附件/附件1.xlsx",
+    "copy": "data/raw/附件1.xlsx",
+    "sha256": "66b87134f5ecccd68184d3539bb1293ef039f9e0fdd955a589b9bfa7f227c377"
+  },
+  {
+    "source": "C题/附件/附件5/result1.xlsx",
+    "copy": "data/raw/result1_template.xlsx",
+    "sha256": "28360e0974e7d6065394a8aba4e14a86773ae0036cc7d3ea1b211b515b03d688"
+  },
+  {
+    "source": "LaTeX-Template/CUMCM-LaTeX-Template/cumcmthesis.cls",
+    "copy": "paper/cumcmthesis.cls",
+    "original_sha256": "25c94bdc05fc4b0cd9a6dd1e7f95b7d94bbe57812fafaa8cafa227b2e0ed117a",
+    "modification": "项目副本固定使用Windows中文字体，避免macOS字体探测与黑体加粗回退；原模板未修改。"
+  },
+  {
+    "source": "C题/附件/附件2.xlsx",
+    "copy": "data/raw/附件2.xlsx",
+    "sha256": "2e95fd446bfafa0d8c59577b5c2e2ea8b3f1def20dde54a3062556f4da9b4c72"
+  },
+  {
+    "source": "C题/附件/附件5/result2.xlsx",
+    "copy": "data/raw/result2_template.xlsx",
+    "sha256": "1c26494cfc6d754e0bd9bff7e13e1126a73d2d2da6c5336eb251d89b9a1a1a47"
+  },
+  {
+    "source": "C题/附件/附件3.xlsx",
+    "copy": "data/raw/附件3.xlsx",
+    "sha256": "8a61b06c52bd0d639a1cc37c61a7d9f5b75edcbca718f64c1bd3498ec9f9d843"
+  },
+  {
+    "source": "C题/附件/附件5/result3.xlsx",
+    "copy": "data/raw/result3_template.xlsx",
+    "sha256": "c59da470cabd0be23f602c95c8aa9d11ec224a0cdac216b3e1f218e65d006bdc"
+  },
+  {
+    "source": "C题/附件/附件4.xlsx",
+    "copy": "data/raw/附件4.xlsx",
+    "sha256": "20e9c93aeab5e8e21ae4dd15587f9e190f7408692504c1319598461cd654fe71"
+  },
+  {
+    "source": "C题/附件/附件5/result4-2.xlsx",
+    "copy": "data/raw/result4-2_template.xlsx",
+    "sha256": "1c26494cfc6d754e0bd9bff7e13e1126a73d2d2da6c5336eb251d89b9a1a1a47"
+  },
+  {
+    "source": "C题/附件/附件5/result4-3.xlsx",
+    "copy": "data/raw/result4-3_template.xlsx",
+    "sha256": "c59da470cabd0be23f602c95c8aa9d11ec224a0cdac216b3e1f218e65d006bdc"
+  }
+]

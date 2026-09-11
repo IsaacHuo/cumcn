@@ -1,0 +1,6 @@
+numpy
+scipy
+openpyxl
+pypdf
+pymupdf
+highspy==1.15.1

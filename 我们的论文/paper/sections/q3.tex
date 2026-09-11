@@ -1,0 +1,94 @@
+\subsection{问题三：预报更新下的购电修订与滚动调度}
+\subsubsection{调整机会与结算模型}
+新预报改变了未来供需的判断，也使已提交的计划可能偏多或偏少。问题三允许在6:00、12:00和18:00修订当天尚未交付的购电量，但减少和增加购电都需要按约定结算。因此，每次更新都应比较维持计划与调整计划的费用。
+
+设$g_t$为0点原计划，$a_t$为最终有效购电量，定义
+\begin{equation}
+\delta_t^+=(a_t-g_t)^+,\qquad \delta_t^-=(g_t-a_t)^+.
+\end{equation}
+取消部分退回原购电费并支付50\%违约费，新增部分按1.5倍电价购买。最终实际费用为
+\begin{equation}
+C_{3,d}=\sum_t\left[p_tg_t-0.5p_t\delta_t^-+1.5p_t\delta_t^++5p_te_t\right].
+\label{eq:q3bill}
+\end{equation}
+例如电价为1元/kWh，某段原计划100 kWh，最终交付80 kWh，非紧急费用为90元。若先改为80再改为90 kWh，则按最终数量结算95元；不同版本不重复累计费用。取消电量不再进入供给，式\eqref{eq:balance}中的$q_t$改为$a_t$。
+
+\subsubsection{预报更新与剩余计划优化}
+0:00利用当时发布的光伏预报和历史负载预测，按问题二的日前框架确定原计划。6:00、12:00和18:00采用新预报时，重新构造对应的历史误差情景，以实际储电量作为初值，优化当天尚未执行的购电量。已执行区间保持不变，原计划$g_t$始终保留为结算基准。
+
+记当天剩余区间为$\mathcal T_0$，次日前瞻区间为$\mathcal T_1$。省略已发生的固定费用，修订模型的目标为
+\begin{align}
+\min J_3={}&\sum_{t\in\mathcal T_0}
+  \left[p_tg_t-0.5p_t\delta_t^-+1.5p_t\delta_t^+\right]
+  +\sum_{t\in\mathcal T_1}p_tg_t\\
+&+\sum_s\pi_s\sum_{t\in\mathcal T_0\cup\mathcal T_1}5p_te_t^{(s)}.
+\end{align}
+各情景共同使用当天调整量，物理约束仍采用统一模型，末端规划储电量为6000 kWh。次日购电仅用于前瞻，按普通电价计入，不预设未来必然发生新的调整。
+
+每次求解都把维持当前计划作为候选。若预计费用改善不超过0.01元，则保持当前计划；否则在费用最优的方案中优先减少变更电量。这一比较已经包含调整费用，不再额外扣除一次违约费。
+
+\subsubsection{滚动执行}
+购电量仅在允许的发布时间修订，储能则每十分钟重新优化并执行当前动作。因此，6:10虽然可以根据新观测调整充放电，却不能再次修改6:00锁定的购电版本。控制器沿用问题二的供需规则与跨日状态递推，实际费用最终由式\eqref{eq:q3bill}计算。
+
+这一安排使新预报先影响剩余计划，再通过储能应对区间内实际偏差。滚动优化提供的是持续修正决策的机制，并不保证每次更新后的实际费用都下降，是否有收益仍需连续回测检验。
+
+\subsubsection{预报误差与更新的作用}
+以相同十分钟区间的实际光伏电量减去插值后的预报电量，分别统计各发布时间的误差。表\ref{tab:q3errors}按发布后24小时内有实测的区间统计，年末超出数据范围的目标区间不参与误差评价。
+\begin{table}[htbp]\centering\small
+\caption{各发布时间光伏预报误差（单位：kWh）}\label{tab:q3errors}
+\input{tables/q3_forecast_errors}
+\end{table}
+各次预报覆盖的昼夜时段与预测提前量不同，不能仅按整段MAE排序判断新预报是否有用。表\ref{tab:q3overlap}进一步把每次新预报与0点预报限制到共同覆盖的当天剩余区间。6点、12点更新在共同区间内降低了MAE和RMSE；18点更新的MAE略高、RMSE略低，改进并不一致。
+\begin{table}[htbp]\centering\small
+\caption{相同目标区间内的预报更新对照（单位：kWh）}\label{tab:q3overlap}
+\input{tables/q3_forecast_overlap}
+\end{table}
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth,height=.45\textheight,keepaspectratio]{figures/forecast_errors.pdf}
+\caption{预测提前量与误差，以及相同目标区间的新旧预报比较。左图的提前量分组也对应不同昼夜时段，不将其差异全部归因于预测距离。}\label{fig:errors}
+\end{figure}
+预报精度与经济效果分别评价。即使预测误差减小，调整费用、剩余库存和后续价格仍可能使实际费用增加，故下一节继续以执行账单比较策略。
+
+\subsubsection{全年对照与预报时刻的价值}
+
+对6、12、18点预报的全部八种选用组合进行独立连续回测，0点预报始终采用。另设接受全部预报但仅调整储能的策略，以区分信息更新和修改购电量的作用。各策略均保留不调整的选择，所有费用由最终交付量与实际紧急购电结算。
+
+\begin{table}[htbp]\centering\scriptsize
+\caption{问题三各策略的334天实际运行结果}\label{tab:q3compare}
+\resizebox{\textwidth}{!}{\input{tables/q3_comparison}}
+\end{table}
+三个时刻均采用的主方案总费用为\QthreeCost\ 万元，紧急购电量为\QthreeEmergency\ kWh，发生于\QthreeDays\ 天。以仅采用0点预报为基准，费用减少\QthreeDifference\ 元，降幅为\QthreeSaving\%。费用构成为原计划金额\QthreePlanCost\ 万元，扣除取消部分退款\QthreeRefund\ 万元，加上违约费\QthreePenalty\ 万元、增购费\QthreeExtra\ 万元和紧急购电费\QthreeEmergencyCost\ 万元。
+
+\input{tables/q3_information_text}
+\input{tables/q3_findings}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth,height=.65\textheight,keepaspectratio]{figures/q3_compare.pdf}
+\caption{预报选用及调整策略的费用与紧急购电比较。}
+\end{figure}
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{figures/q3_year.pdf}
+\caption{主方案逐月购电费用构成。净基础费用为原计划金额减去取消部分退款。}
+\end{figure}
+
+\subsubsection{指定日期的执行结果}
+表\ref{tab:q3selected}至表\ref{tab:q3emergency}给出四个指定日期的计划、最终调整量及实际储能运行。调整后电量指非紧急交付量，加上紧急电量才是总购电量。
+\begin{table}[htbp]\centering\scriptsize
+\caption{指定日期的电量、总费用及首尾储电量（电量单位：kWh）}\label{tab:q3selected}
+\resizebox{\textwidth}{!}{\input{tables/q3_selected}}
+\end{table}
+\begin{table}[htbp]\centering\scriptsize
+\caption{指定时段的原计划与最终调整电量（kWh）}\label{tab:q3purchase}
+\resizebox{\textwidth}{!}{\input{tables/q3_purchase}}
+\end{table}
+\begin{table}[htbp]\centering\scriptsize
+\caption{指定日期各四小时区间的实际充放电量（kWh）}\label{tab:q3storage}
+\resizebox{\textwidth}{!}{\input{tables/q3_storage}}
+\end{table}
+\begin{table}[htbp]\centering\small
+\caption{指定日期连续紧急购电区间及电量}\label{tab:q3emergency}
+\input{tables/q3_emergency}
+\end{table}
+
+
+\input{tables/q3_figure}
