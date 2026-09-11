@@ -1,0 +1,11 @@
+{
+  "days": 334,
+  "planRows": 334,
+  "adjustedRows": 334,
+  "planColumns": 147,
+  "adjustedColumns": 147,
+  "storageRows": 2004,
+  "emergencyRows": 754,
+  "planIntervals": 144,
+  "errorScan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

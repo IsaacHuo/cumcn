@@ -1,0 +1,1701 @@
+{
+  "passed": true,
+  "days": 334,
+  "intervals": 48096,
+  "max_reconstruction_error": 6.661338147750939e-16,
+  "current_solve_median_seconds": 0.01715870000043651,
+  "current_solve_99_percentile_seconds": 0.033379835000414505,
+  "current_solve_max_seconds": 0.18722130000060133,
+  "cold_restarts": [
+    {
+      "date": "2025-06-01",
+      "interval": 53,
+      "initial_status": "HighsModelStatus.kUnknown",
+      "retry_status": "HighsModelStatus.kOptimal"
+    },
+    {
+      "date": "2025-12-03",
+      "interval": 88,
+      "initial_status": "HighsModelStatus.kUnknown",
+      "retry_status": "HighsModelStatus.kOptimal"
+    }
+  ],
+  "fallback_events": [],
+  "sha256": {
+    "data\\raw\\附件2.xlsx": "2e95fd446bfafa0d8c59577b5c2e2ea8b3f1def20dde54a3062556f4da9b4c72",
+    "data\\raw\\附件1.xlsx": "66b87134f5ecccd68184d3539bb1293ef039f9e0fdd955a589b9bfa7f227c377",
+    "code\\solve_q2.py": "d673623e0ca488bf1be6ef67cebd89af57303b20b8efd92fb69080053b67a352"
+  },
+  "daily_scenario_counts": [
+    {
+      "date": "2025-02-01",
+      "complete_error_pairs": 23,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-02",
+      "complete_error_pairs": 24,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-03",
+      "complete_error_pairs": 25,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-04",
+      "complete_error_pairs": 26,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-05",
+      "complete_error_pairs": 27,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-02-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-03-31",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-04-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-05-31",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-06-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-07-31",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-08-31",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-09-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-10-31",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-11-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-01",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-02",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-03",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-04",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-05",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-06",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-07",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-08",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-09",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-10",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-11",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-12",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-13",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-14",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-15",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-16",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-17",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-18",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-19",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-20",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-21",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-22",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-23",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-24",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-25",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-26",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-27",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-28",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-29",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-30",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    },
+    {
+      "date": "2025-12-31",
+      "complete_error_pairs": 28,
+      "representatives": 7
+    }
+  ]
+}

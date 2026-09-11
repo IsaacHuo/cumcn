@@ -1,0 +1,3 @@
+24.1.0.2537033 (R2024a)
+Figure source: code/plot_q1.m
+Input: results/q1.json

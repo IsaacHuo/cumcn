@@ -1,0 +1,14 @@
+[
+  {
+    "case": "flat_price_no_pv",
+    "passed": true
+  },
+  {
+    "case": "pv_exactly_meets_load",
+    "passed": true
+  },
+  {
+    "case": "pv_surplus_can_be_curtailed",
+    "passed": true
+  }
+]

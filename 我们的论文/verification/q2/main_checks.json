@@ -1,0 +1,14 @@
+{
+  "variant": "main",
+  "days": 334,
+  "max_energy_balance_error_kwh": 1.2470025012589758e-11,
+  "max_reconstructed_soc_error_kwh": 1.2732925824820995e-11,
+  "max_bound_violation_kwh": 6.0254023992456496e-12,
+  "max_accounting_error_yuan": 1.4551915228366852e-11,
+  "final_soc": 8268.61888060867,
+  "total_cost": 14536841.9425279,
+  "emergency_total": 295904.1289291624,
+  "unused_total": 2179324.969339373,
+  "fallback_events": [],
+  "passed": true
+}

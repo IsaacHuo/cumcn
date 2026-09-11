@@ -1,0 +1,16 @@
+{
+  "sheets": [
+    "计划购电量",
+    "充放电量",
+    "紧急购电量"
+  ],
+  "plan_days": 334,
+  "plan_intervals": 144,
+  "storage_rows": 2004,
+  "emergency_rows": 1032,
+  "date_continuity": true,
+  "template_residuals": [],
+  "plan_total_checks": 334,
+  "storage_boundary_checks": 334,
+  "emergency_day_checks": 334
+}

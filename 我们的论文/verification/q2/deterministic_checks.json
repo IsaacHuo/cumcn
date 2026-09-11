@@ -1,0 +1,14 @@
+{
+  "variant": "deterministic",
+  "days": 334,
+  "max_energy_balance_error_kwh": 2.0236257114447653e-11,
+  "max_reconstructed_soc_error_kwh": 1.5006662579253316e-11,
+  "max_bound_violation_kwh": 6.0254023992456496e-12,
+  "max_accounting_error_yuan": 1.4551915228366852e-11,
+  "final_soc": 8339.614140370371,
+  "total_cost": 15027357.979696756,
+  "emergency_total": 532578.4859673157,
+  "unused_total": 1567501.7973868854,
+  "fallback_events": [],
+  "passed": true
+}

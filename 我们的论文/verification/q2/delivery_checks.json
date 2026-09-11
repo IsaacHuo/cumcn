@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "numerical_checks": {
+    "main": {
+      "variant": "main",
+      "days": 334,
+      "max_energy_balance_error_kwh": 1.2470025012589758e-11,
+      "max_reconstructed_soc_error_kwh": 1.2732925824820995e-11,
+      "max_bound_violation_kwh": 6.0254023992456496e-12,
+      "max_accounting_error_yuan": 1.4551915228366852e-11,
+      "final_soc": 8268.61888060867,
+      "total_cost": 14536841.9425279,
+      "emergency_total": 295904.1289291624,
+      "unused_total": 2179324.969339373,
+      "fallback_events": [],
+      "passed": true
+    },
+    "deterministic": {
+      "variant": "deterministic",
+      "days": 334,
+      "max_energy_balance_error_kwh": 2.0236257114447653e-11,
+      "max_reconstructed_soc_error_kwh": 1.5006662579253316e-11,
+      "max_bound_violation_kwh": 6.0254023992456496e-12,
+      "max_accounting_error_yuan": 1.4551915228366852e-11,
+      "final_soc": 8339.614140370371,
+      "total_cost": 15027357.979696756,
+      "emergency_total": 532578.4859673157,
+      "unused_total": 1567501.7973868854,
+      "fallback_events": [],
+      "passed": true
+    },
+    "no_storage": {
+      "variant": "no_storage",
+      "days": 334,
+      "max_energy_balance_error_kwh": 2.2737367544323206e-13,
+      "max_reconstructed_soc_error_kwh": 0.0,
+      "max_bound_violation_kwh": 0.0,
+      "max_accounting_error_yuan": 1.4551915228366852e-11,
+      "final_soc": 6000.0,
+      "total_cost": 19210224.660766803,
+      "emergency_total": 400915.55514999985,
+      "unused_total": 4983003.129983333,
+      "fallback_events": [],
+      "passed": true
+    }
+  },
+  "workbook": {
+    "sheets": [
+      "计划购电量",
+      "充放电量",
+      "紧急购电量"
+    ],
+    "plan_days": 334,
+    "plan_intervals": 144,
+    "storage_rows": 2004,
+    "emergency_rows": 1032,
+    "date_continuity": true,
+    "template_residuals": [],
+    "plan_total_checks": 334,
+    "storage_boundary_checks": 334,
+    "emergency_day_checks": 334
+  },
+  "paper": {
+    "pages": 12,
+    "layout_or_reference_warnings": [],
+    "text_characters": 10127
+  },
+  "matlab_vector_figures": {
+    "q2_year": {
+      "pages": 1,
+      "raster_images": 0
+    },
+    "q2_compare": {
+      "pages": 1,
+      "raster_images": 0
+    },
+    "q2_day_20250320": {
+      "pages": 1,
+      "raster_images": 0
+    },
+    "q2_day_20250621": {
+      "pages": 1,
+      "raster_images": 0
+    },
+    "q2_day_20250923": {
+      "pages": 1,
+      "raster_images": 0
+    },
+    "q2_day_20251221": {
+      "pages": 1,
+      "raster_images": 0
+    }
+  },
+  "sha256": {
+    "paper\\build\\main.pdf": "5a35542c3f7130b67c7065d1bd2944ded5af21e3632b4376cb8e1642e7c7b190",
+    "paper\\main.tex": "d52620bd088addfe3ae3e81c7f43e743bffd4f641171e9532a215c94021c254b",
+    "paper\\sections\\q2.tex": "1035e3178417fbfbd06f50399a74cff96af9e77e72ba125a80d70b21a2ea32fd",
+    "results\\result2.xlsx": "5cdf356428c43bdcbe6219d028a68514ef8eb1b2a48e9cae6137ed193740942f",
+    "results\\q2_report.json": "ab98b56651f8d5f542b58c6cf280dc6089bd3b6da96ec893913ea0aabf88cef1",
+    "results\\q2_detail.csv": "3aa40d5d80597f7d3dafdf038671ba68b23d8b6319fc01c8bca8c8e5bcf4709f",
+    "code\\plot_q2.m": "68f00c1edb171f1ccb0e08bfb3e6b72ff22ac03f9cee3d5f871890ed30a71e12",
+    "code\\solve_q2.py": "d673623e0ca488bf1be6ef67cebd89af57303b20b8efd92fb69080053b67a352"
+  }
+}

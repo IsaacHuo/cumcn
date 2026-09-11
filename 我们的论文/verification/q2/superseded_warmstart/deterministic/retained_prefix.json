@@ -1,0 +1,4 @@
+{
+  "retained_before": "2025-02-14",
+  "reason": "Only add exact-LP cold-start retry after a nonoptimal solver status; retained prefix had no such status or fallback. No model or policy parameter changed."
+}

@@ -1,0 +1,22 @@
+{
+  "variant": "h12_18",
+  "days": 334,
+  "full_year": true,
+  "physical_checks": 334,
+  "settlement_checks": 334,
+  "cross_day_soc_checks": 333,
+  "causal_version_checks": 334,
+  "fallback_events": [],
+  "successful_cold_restarts": [
+    {
+      "date": "2025-10-16",
+      "stage": 3,
+      "interval": 115,
+      "initial_status": "HighsModelStatus.kUnknown",
+      "retry_status": "HighsModelStatus.kOptimal"
+    }
+  ],
+  "max_balance_residual": 3.883769750245847e-09,
+  "max_soc_residual": 1.502461313257778e-11,
+  "max_settlement_residual": 1.4551915228366852e-11
+}

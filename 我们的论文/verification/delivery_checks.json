@@ -1,0 +1,15 @@
+{
+  "numerical_validation": "q1_checks.json",
+  "efficiency_validation": "efficiency_checks.json",
+  "analytical_cases": "model_cases.json",
+  "spreadsheet_validation": "xlsx_checks.json",
+  "figure_engine": "MATLAB R2024a",
+  "pdf_engine": "XeLaTeX / MiKTeX",
+  "template_changes": "Windows font configuration in the project copy only",
+  "remaining_environment_notices": "Installed ctex requests a newer LaTeX kernel; compilation succeeds. No global TeX installation was updated.",
+  "pdf_pages": 5,
+  "no_overfull_boxes": true,
+  "no_undefined_references": true,
+  "no_missing_characters": true,
+  "editorial_revision": "正文独立陈述数据约定、模型与结果；移除模板争议、核查过程及防御性表述。"
+}

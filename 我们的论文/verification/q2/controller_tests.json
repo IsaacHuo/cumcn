@@ -1,0 +1,95 @@
+{
+  "information_isolation": {
+    "passed": true,
+    "prefix_intervals": 4
+  },
+  "root_cases": [
+    {
+      "case": "zero_error",
+      "passed": true,
+      "action": [
+        0.0,
+        -0.0,
+        100.0,
+        0.0
+      ]
+    },
+    {
+      "case": "pv_drop",
+      "passed": true,
+      "action": [
+        0.0,
+        100.0,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "case": "load_surge",
+      "passed": true,
+      "action": [
+        0.0,
+        -0.0,
+        1000.0,
+        0.0
+      ]
+    },
+    {
+      "case": "low_supply",
+      "passed": true,
+      "action": [
+        0.0,
+        -0.0,
+        100.0,
+        0.0
+      ]
+    },
+    {
+      "case": "low_demand",
+      "passed": true,
+      "action": [
+        100.0,
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "case": "high_supply",
+      "passed": true,
+      "action": [
+        0.0,
+        -0.0,
+        100.0,
+        0.0
+      ]
+    },
+    {
+      "case": "high_demand",
+      "passed": true,
+      "action": [
+        0.0,
+        0.0,
+        0.0,
+        100.0
+      ]
+    }
+  ],
+  "crossday_pilots": [
+    {
+      "file": "2025-02-01.npz",
+      "passed": true,
+      "day_index": 31
+    },
+    {
+      "file": "2025-02-02.npz",
+      "passed": true,
+      "day_index": 32
+    }
+  ],
+  "zero_error_closed_loop": {
+    "passed": true,
+    "emergency_kwh": 0.0
+  },
+  "future_mutation_day_ahead_plan_unchanged": true
+}

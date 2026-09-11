@@ -1,0 +1,13 @@
+{
+  "variant": "pilot",
+  "days": 2,
+  "full_year": false,
+  "physical_checks": 2,
+  "settlement_checks": 2,
+  "cross_day_soc_checks": 1,
+  "causal_version_checks": 2,
+  "error_events_zero": true,
+  "max_balance_residual": 3.183231456205249e-12,
+  "max_soc_residual": 9.094947017729282e-13,
+  "max_settlement_residual": 7.275957614183426e-12
+}

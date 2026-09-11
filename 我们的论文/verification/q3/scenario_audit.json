@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "days": 334,
+  "forecast_vintages": 1336,
+  "max_reconstruction_error": 1.1368683772161603e-12,
+  "adjustment_decisions": 1002,
+  "changed": 950,
+  "min_expected_gain": -1.4551915228366852e-11,
+  "median_current_solve_seconds": 0.02104425000015908,
+  "max_current_solve_seconds": 0.1833439999991242,
+  "successful_cold_restarts": [
+    {
+      "date": "2025-10-16",
+      "stage": 3,
+      "interval": 115,
+      "initial_status": "HighsModelStatus.kUnknown",
+      "retry_status": "HighsModelStatus.kOptimal"
+    }
+  ]
+}

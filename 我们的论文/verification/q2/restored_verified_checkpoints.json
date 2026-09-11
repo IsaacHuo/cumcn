@@ -1,0 +1,668 @@
+[
+  {
+    "variant": "deterministic",
+    "date": "2025-03-15",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-16",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-17",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-18",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-19",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-20",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-21",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-22",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-23",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-24",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-25",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-26",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-27",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-28",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-29",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-30",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-03-31",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-01",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-02",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-03",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-04",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-05",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-06",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-07",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-08",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-09",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-10",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-11",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-12",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-13",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-14",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-15",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-16",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-17",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-18",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-19",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-20",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-21",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-22",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-23",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-24",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-25",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-26",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-27",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-28",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-29",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-04-30",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-01",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-02",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-03",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-04",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-05",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-06",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-07",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-08",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-09",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-10",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-11",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-12",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-13",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-14",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-15",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-16",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-17",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-18",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-19",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-20",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-21",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-22",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-23",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-24",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-25",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-26",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-27",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-28",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-29",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-30",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-05-31",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-01",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-02",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-03",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-04",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-05",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-06",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-07",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-08",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-09",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-10",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-11",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-12",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-13",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-14",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-15",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-16",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-17",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-18",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-19",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-20",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-21",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-22",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-23",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-24",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-25",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-26",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-27",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-28",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-29",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-06-30",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-07-01",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-07-02",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  },
+  {
+    "variant": "deterministic",
+    "date": "2025-07-03",
+    "initial_soc_exact_match": true,
+    "no_fallback": true
+  }
+]

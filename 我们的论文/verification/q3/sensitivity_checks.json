@@ -1,0 +1,86 @@
+[
+  {
+    "file": "2025-03-20_k14_target6000.npz",
+    "passed": true,
+    "balance_residual": 3.0127011996228248e-12,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 41026.22518554653
+  },
+  {
+    "file": "2025-03-20_k7_target4800.npz",
+    "passed": true,
+    "balance_residual": 3.069544618483633e-12,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 42591.41243967138
+  },
+  {
+    "file": "2025-03-20_k7_target7200.npz",
+    "passed": true,
+    "balance_residual": 2.9558577807620168e-12,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 42591.41243967686
+  },
+  {
+    "file": "2025-06-21_k14_target6000.npz",
+    "passed": true,
+    "balance_residual": 1.1368683772161603e-13,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 24811.931415660445
+  },
+  {
+    "file": "2025-06-21_k7_target4800.npz",
+    "passed": true,
+    "balance_residual": 1.9326762412674725e-12,
+    "soc_residual": 7.958078640513122e-13,
+    "cost": 24691.61150943859
+  },
+  {
+    "file": "2025-06-21_k7_target7200.npz",
+    "passed": true,
+    "balance_residual": 1.9326762412674725e-12,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 24691.611509438742
+  },
+  {
+    "file": "2025-09-23_k14_target6000.npz",
+    "passed": true,
+    "balance_residual": 1.9326762412674725e-12,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 45796.16964123511
+  },
+  {
+    "file": "2025-09-23_k7_target4800.npz",
+    "passed": true,
+    "balance_residual": 1.5916157281026244e-12,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 47093.42610436117
+  },
+  {
+    "file": "2025-09-23_k7_target7200.npz",
+    "passed": true,
+    "balance_residual": 1.5916157281026244e-12,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 47093.42610436013
+  },
+  {
+    "file": "2025-12-21_k14_target6000.npz",
+    "passed": true,
+    "balance_residual": 1.6342482922482304e-12,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 64292.045768758486
+  },
+  {
+    "file": "2025-12-21_k7_target4800.npz",
+    "passed": true,
+    "balance_residual": 2.2737367544323206e-13,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 63767.3185199596
+  },
+  {
+    "file": "2025-12-21_k7_target7200.npz",
+    "passed": true,
+    "balance_residual": 2.2737367544323206e-13,
+    "soc_residual": 9.094947017729282e-13,
+    "cost": 63767.31851997184
+  }
+]
