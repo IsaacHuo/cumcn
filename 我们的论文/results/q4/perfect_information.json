@@ -1,0 +1,11 @@
+{
+  "name": "完全信息下界",
+  "total_cost": 12780883.287952024,
+  "emergency_total": 0.0,
+  "emergency_days": 0,
+  "unused_total": 990168.0903121398,
+  "final_soc": 1200.0,
+  "max_balance_or_soc_error": 1.8189894035458565e-12,
+  "elapsed_seconds": 7.98510350000015,
+  "terminal_condition": "Free within [1200,10800]; initial 6000; therefore valid lower bound for all tested terminal inventories."
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "variant": "main_point",
+  "price_forecast": "previous 7 complete days mean",
+  "scenario_count": 7,
+  "target": 6000,
+  "history_pairs": 28,
+  "prior_mix": 0.05,
+  "settlement": "actual delivery price; original minus 0.5 cancellation plus 1.5 additions plus 5 emergency",
+  "source_sha256": "6f3165cb374f7485972f55ab70f6eb5d2403745f9e049e97af88cf5979bc11d3",
+  "price_sha256": "20e9c93aeab5e8e21ae4dd15587f9e190f7408692504c1319598461cd654fe71"
+}
